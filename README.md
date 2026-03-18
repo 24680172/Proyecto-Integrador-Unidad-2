@@ -1,3 +1,4 @@
+# CREACION DE LA APLICACIÓN.PY
 Este proyecto es una aplicación gráfica desarrollada con Flet que simula una tienda de tecnología con carrito y favoritos.
 
 **1. Importaciones**
@@ -177,3 +178,33 @@ if __name__ == "__main__":
 ```
 - Inicia la aplicación.
 - Usa main como función principal.
+
+# CREACIÓN DE LA PAGINA WEB APARTIR DE LA APP
+Despliegue en Netlify
+¿Qué es Netlify?
+Netlify es una plataforma gratuita que permite publicar aplicaciones web en internet con solo arrastrar una carpeta.
+
+¿Cómo se preparó la app para web?
+Flet permite convertir una aplicación de escritorio en web usando el comando flet publish. Este comando genera una carpeta dist/ con todos los archivos necesarios para el despliegue.
+
+Se ejecutó el siguiente comando en la terminal dentro de la carpeta del proyecto:
+
+flet publish main.py
+Esto generó automáticamente:
+
+- dist/index.html — página principal
+- dist/manifest.json — configuración de la app
+- dist/version.json — versión de Flet
+- dist/app.tar.gz — código comprimido de la app
+
+Pasos para desplegar en Netlify:
+1. Entrar a netlify.com e iniciar sesión
+2. En el panel principal ir a:
+- Sites → Add new project → Deploy manually
+3. Arrastrar la carpeta dist/ generada por flet publish a la zona de deploy de Netlify
+4. Netlify procesa los archivos automáticamente y genera un link único:
+- [https://nombre-aleatorio.netlify.app](https://resonant-selkie-196ccb.netlify.app/)
+5. Se puede personalizar el nombre del sitio desde:
+- Site configuration → Site details → Change site name
+Resultado:
+La app quedó disponible públicamente en internet sin necesidad de un servidor propio.
